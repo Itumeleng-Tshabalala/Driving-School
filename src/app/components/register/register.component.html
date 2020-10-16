@@ -1,0 +1,66 @@
+<!-- Modal HTML -->
+<div id="registerModal" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">				
+				<h4 class="modal-title">Register</h4>
+				<button #btnClose type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<form [formGroup]="registerForm" (ngSubmit)="register()">
+
+					<div [hidden]="!error" class="alert alert-danger alert-dismissible fade show"  role="alert">
+						<p></p>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+                    </div>
+                    
+                    <div class="form-group">
+						<input type="text" class="form-control" autocomplete formControlName="name" placeholder="Enter name" required>
+					</div>
+					<div [hidden]="!error" class="alert alert-danger alert-dismissible fade show"  role="alert">
+						<p></p>
+                    </div>
+                    
+                    <div class="form-group">
+						<input type="text" class="form-control" autocomplete formControlName="surname" placeholder="Enter surname" required>
+						
+                    </div>
+                    
+                    <div class="form-group">
+						<input type="text" class="form-control" autocomplete formControlName="id" placeholder="Enter SA ID  number" required>
+						
+                    </div>
+                    
+                    <div class="form-group">
+						<input type="text" class="form-control" autocomplete formControlName="phone_number" placeholder="Enter phone_number" required>
+						
+                    </div>
+
+					<div class="form-group">
+						<input type="email" class="form-control" autocomplete formControlName="email" placeholder="Enter email" required>
+						
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control" autocomplete formControlName="password" placeholder="Password" required>
+                    </div>
+                    
+                    <div class="form-group">
+						<input type="password" class="form-control" autocomplete  formControlName="password_confirmation" placeholder="Password Confirmation" required>
+					</div>
+
+					<div class="form-group">
+						<input type="submit" class="btn btn-dark btn-block btn-sm" [disabled]="!registerForm.valid" value="Register">
+					</div>
+				</form>				
+
+			</div>
+			<div class="modal-footer">
+				<a href="#">Forgot Password?</a>
+			</div>
+		</div>
+	</div>
+</div>   

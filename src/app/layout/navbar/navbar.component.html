@@ -1,0 +1,107 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="#"><img class="logo" src="../../../assets/images/logo1.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-md-auto">
+            <div class="btn-spacer"></div>
+            <li *ngIf="isLoggedIn" class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Bookings </a>
+                <ul class="dropdown-menu dropdown-menu-sm-left">
+
+                    <li>
+                        <h6 class="dropdown-header">Bookings</h6>
+                        <h6 class="dropdown-header"><b>All bookings </b></h6>
+                    </li>
+                    
+                    <div role="separator" class="dropdown-divider"></div>
+
+                    <li>
+                        <a class="dropdown-item a-link" href="#">Book a driving lesson</a>
+                    </li>
+
+                    <div role="separator" class="dropdown-divider"></div>
+
+                    <li>
+                        <a class="dropdown-item a-link" href="#">Booking a Learner’s test</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <div class="btn-spacer"></div>
+
+            <li >
+                <a routerLink="/our-prices" class="nav-link btn btn-dark btn-sm"> Our Prices </a>
+            </li>
+
+            <div class="btn-spacer"></div>
+
+            <li>
+                <a routerLink="/contact-us" class="nav-link btn btn-dark btn-sm"> Contact Us </a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav">
+            
+            <li class="nav-item">
+                <a routerLink="/our-services" class="nav-link btn btn-dark btn-sm"> Our Services </a>
+            </li>
+
+            <div class="btn-spacer"></div>
+
+            <li class="nav-item">
+                <a routerLink="/about-us" class="nav-link btn btn-dark btn-sm"> About US </a>
+            </li>
+
+            <div class="btn-spacer"></div>
+            
+            <li class="nav-item" *ngIf="!isLoggedIn">
+                <a href="#myModal" class="nav-link btn btn-dark btn-sm" data-toggle="modal"> Login </a>
+            </li>
+
+            <div class="btn-spacer"></div>
+            
+            <li class="nav-item" *ngIf="!isLoggedIn">
+                <a href="#registerModal" class="nav-link btn btn-dark btn-sm" data-toggle="modal"> Register </a>
+            </li>
+
+            <li class="nav-item dropdown" *ngIf="isLoggedIn">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Settings </a>
+                <ul class="dropdown-menu dropdown-menu-sm-right ">
+
+                    <li>
+                        <h6 class="dropdown-header">Signed-In as</h6>
+                        <h6 class="dropdown-header bold-text"><b>{{ userName }}</b></h6>
+                    </li>
+
+                    <div role="separator" class="dropdown-divider"></div>
+
+                    <li>
+                        <a class="dropdown-item a-link" href="#">Your profile</a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item a-link" href="#">Your bookings</a>
+                    </li>
+                    
+                    <div role="separator" class="dropdown-divider"></div>
+
+                    <li>
+                        <a class="dropdown-item a-link" href="#">Your bookings</a>
+                    </li>
+                    
+                    <div role="separator" class="dropdown-divider"></div>
+
+                    <li>
+                        <a class="dropdown-item a-link"  (click)="logout()">Sign out</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

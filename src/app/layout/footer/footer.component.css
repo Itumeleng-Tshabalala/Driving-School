@@ -1,0 +1,16 @@
+.logo-footer{
+    max-width: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: dimgray;
+}
+
+a:hover{
+    color: green;
+}
+
+.row{
+    padding-top: 15px;
+}

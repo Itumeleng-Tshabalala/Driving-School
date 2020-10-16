@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+// Services
+import { LoginService } from "./service/login/login.service";
+import { TokenService } from './service/token/token.service';
+import { UserService } from "./service/user/user.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Application';
+	title = '@YourService';
+	
+	userName: string;
+	constructor(
+		private loginServ: LoginService,
+		private tokenServ: TokenService,
+		private userServ: UserService,
+	) { }
+
+	ngOnInit(): void {
+		this.loginServ.authStatus.subscribe(
+			logged => {
+				
+				if(logged){
+					this.userName = this.userServ.getName();
+				}
+			}
+		);
+	}
 }
