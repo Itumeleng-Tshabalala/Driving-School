@@ -35,6 +35,7 @@ export class NavbarComponent implements OnInit {
 		);
 	}
 
+	
 	logout(){
 		this.loginServ.changeAuthStatus(false);
 		this.tokenServ.removeToken();
