@@ -1,7 +1,15 @@
 img{
-    height: 50%;
+    /* height: 50%; */
+    width: 100;
 }
 
-.row{
-    background-color: lightsteelblue;
+
+.spacer{
+    margin-left: 100px;
+}
+
+.p{
+    font-weight: lighter;
+    font-size: small;
+    color: rgba(16, 1, 1, 0.289);
 }

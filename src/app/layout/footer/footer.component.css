@@ -24,3 +24,8 @@ a:hover{
 footer{
     background-color: white;
 }
+
+.description{
+    margin-left: 70px;
+    margin-right: 30px;
+}
