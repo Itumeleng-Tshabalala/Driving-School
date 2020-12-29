@@ -12,7 +12,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
 import { HttpClientModule } from "@angular/common/http";
-import { PricesComponent } from './components/prices/prices.component';
 import { RegisterComponent } from './components/register/register.component';
 
 
@@ -23,7 +22,6 @@ import { RegisterComponent } from './components/register/register.component';
 		FooterComponent,
 		HomeComponent,
 		LoginComponent,
-		PricesComponent,
 		RegisterComponent,
     ],
     imports: [
