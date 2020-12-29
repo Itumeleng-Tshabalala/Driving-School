@@ -23,7 +23,6 @@ export class AppComponent {
 	ngOnInit(): void {
 		this.loginServ.authStatus.subscribe(
 			logged => {
-				
 				if(logged){
 					this.userName = this.userServ.getName();
 				}

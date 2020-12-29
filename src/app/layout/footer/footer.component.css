@@ -1,8 +1,9 @@
 .logo-footer{
-    max-width: 150px;
+    max-width: 100px;
 }
 
 a{
+
     text-decoration: none;
     color: dimgray;
 }
@@ -12,5 +13,14 @@ a:hover{
 }
 
 .row{
-    padding-top: 15px;
+    padding-top: 50px;
+}
+
+.spacer{
+    padding: 50px;
+}
+
+
+footer{
+    background-color: white;
 }

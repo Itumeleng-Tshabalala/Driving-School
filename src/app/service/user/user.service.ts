@@ -24,7 +24,7 @@ export class UserService {
 	) { }
 
 	setName(data) : void{
-		this.name = data.user.name + " - " + data.user.surname;
+		this.name = data.user.name;
 	}
 
 	getName() {

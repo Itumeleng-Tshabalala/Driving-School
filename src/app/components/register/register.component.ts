@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
 	HandleResponse(data){
 		this.tokenServ.handleToken(data.access_token);
 		this.loginServ.changeAuthStatus(true);
-		this.router.navigateByUrl('/our-prices');
+		this.router.navigateByUrl('/');
 	}
 
 }

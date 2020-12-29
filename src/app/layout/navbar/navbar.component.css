@@ -24,3 +24,17 @@ ul li{
 .bold-text-{
     color: black;
 }
+
+
+img{
+    height: 80px;
+    width: 100%;
+}
+
+nav{
+    background-color: white;
+}
+
+.nav-tog{
+    background-color: rgba(105, 105, 105, 0.576);
+}
