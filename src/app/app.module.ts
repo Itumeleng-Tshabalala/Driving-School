@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 
 import { HttpClientModule } from "@angular/common/http";
 import { RegisterComponent } from './components/register/register.component';
+import { OurBusinessComponent } from './components/our-business/our-business.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { RegisterComponent } from './components/register/register.component';
 		HomeComponent,
 		LoginComponent,
 		RegisterComponent,
+		OurBusinessComponent,
     ],
     imports: [
 		BrowserModule,
